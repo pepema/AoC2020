@@ -31,10 +31,8 @@ int Find2020_3(const std::vector<int>& v){
 void FillReport(std::vector<int>& v){
   std::ifstream file("input.txt");
   std::string line;
-  int count = 0;
   while(std::getline(file,line)){
     v.push_back(std::stoi(line));
-    count++;
   }
   file.close();
 }
