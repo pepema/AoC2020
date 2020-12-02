@@ -20,7 +20,7 @@ int Find2020_3(const std::vector<int>& v){
     for(int j=i+1;j<v.size()+1;j++){
       for(int k=j+1;k<v.size();k++){
         if(v[i]+v[j]+v[k] == 2020){
-        return v[i]*v[j]*v[k];
+          return v[i]*v[j]*v[k];
         }
       }
     }
@@ -42,4 +42,5 @@ int main(){
   FillReport(expense_report);
   std::cout << Find2020(expense_report) << std::endl;
   std::cout << Find2020_3(expense_report) << std::endl;
+  return 0;
 }

@@ -14,7 +14,7 @@ bool ValidPassword(const Password& p){
   int count = 0;
 
   for(const auto& i : pw){
-    if(pw[i]==letter);
+    if(i==letter) count++;
   }
   return (count >= floor && count <= roof) ? true : false;
 }
@@ -26,20 +26,20 @@ int GetNumberOfValidPasswords(const Passmap& p){
 
 
 void FillPassmap(const Passmap& p){
-  std::ifstream file("input.txt");
+  std::ifstream file("testing_input.txt");
   std::string line;
   while(std::getline(file,line)){
-
+    /*std::string pw = 
+    char letter = std::get<2>(p);
+    int roof = std::get<1>(p);
+    int floor = std::get<0>(p);*/
+    std::cout << line << std::endl;
   }
   file.close();
 }
 
 int main(){
   Passmap passwords;
-  passwords.push_back({1,3,'a',"abcde"});
-  passwords.push_back({1,3,'b',"cdefg"});
-  passwords.push_back({2,9,'a',"ccccccccc"});
-
-  std::cout << ValidPassword(passwords[0]) << std::endl;
-  std::cout << "hello" << std::endl;
+  FillPassmap(passwords);
+  return 0;
 }
