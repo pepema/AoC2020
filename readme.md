@@ -1,2 +1,2 @@
 ## HELLO! 
-g++ -std=c++1z to compile with c++14
+g++ -std=c++1z to compile with c++17
